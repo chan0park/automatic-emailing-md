@@ -23,15 +23,19 @@ Any contribution is welcomed.
 Follow instruction described [here](https://easyengine.io/tutorials/linux/ubuntu-postfix-gmail-smtp/).
 This step can take some time and patience.
 
-2. `git config --global credential.helper cache && git pull`
-in order to avoid typing username, password for the automatic git pull command, you need to cache the info.
+2. in order to avoid typing username, password for the automatic git pull command, you need to cache the info.
+```
+git config --global credential.helper cache && git pull
+```
 
-3. make shell script that pull the git todos repo, and send the content as a body of the email.
-You have to change the destination email address, and also the filename if it's needed.
+
+3. make shell script that pull the git todos repo, and send the content as a body of the email.  
+You have to change the destination email address, and also the filename if it's needed.  
+If you use `sendmail` package, you have to change `mail` to `sendmail`
 ```
 git pull && markdown ./todos.md | mail -s "Daily TODOS" -a "Content-type: text/html" whatever@you.want
 ```
-If you use `sendmail` package, you have to change `mail` to `sendmail`
+
 
 4. set to run the script everyday using crontab.
 You can set the specific time you want to receive the email, by configuring the 5 parameters. (minute/hour/day/month/day of week)
