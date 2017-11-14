@@ -8,7 +8,7 @@ You can set the time you want to receive the email, for example, every 10am in t
 This project wass motivated by a simple idea.
 > Can I manage my "todos" with git?
 
-> Can it be automatically sent to an email every morning, so that I can clearly see what I have to do that day?
+> Can it be automatically sent as an email every morning, so that I can clearly see what I have to do that day?
 
 Although this repo started from TODO list, it can be used in notifying any other files that are formated in markdown. 
 
