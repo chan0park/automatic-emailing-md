@@ -23,7 +23,8 @@ Any contribution is welcomed.
 Follow instruction described [here](https://easyengine.io/tutorials/linux/ubuntu-postfix-gmail-smtp/).
 This step can take some time and patience.
 
-2. in order to avoid typing username, password for the automatic git pull command, you need to cache the info.
+2. in order to avoid typing username, password for the automatic git pull command, you need to cache the info.  
+otherwise, you can configure the `.git/config` file to store your username and pw, like `https://user:password@github.com/name/repo.git master`.
 ```
 git config --global credential.helper cache && git pull
 ```
